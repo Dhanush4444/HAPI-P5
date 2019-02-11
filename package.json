@@ -9,6 +9,7 @@
   "author": "Dazz",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^18.0.1"
+    "hapi": "^18.0.1",
+    "inert": "^5.1.2"
   }
 }
