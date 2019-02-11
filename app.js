@@ -12,7 +12,7 @@ server.route({
     path: '/',
     handler: (request, h) => {
 
-        return 'Hello, world!';
+        return 'Home Page!';
     }
 });
 
@@ -24,6 +24,7 @@ server.route({
 //         return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
 //     }
 // });
+
 server.route({
     method: 'GET',
     path: '/ellipse',
