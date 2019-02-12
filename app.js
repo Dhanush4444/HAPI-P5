@@ -33,6 +33,16 @@ server.route({
         return h.file('./public/index.html');
     }
 });
+
+server.route({
+    method: 'GET',
+    path: '/input',
+    handler: (request, h) => {
+
+        return h.file('./public/input.html');
+    }
+});
+
 const init = async () => {
 
     await server.register(require('inert'));
