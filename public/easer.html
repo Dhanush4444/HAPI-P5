@@ -3,6 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Easer</title>
+    <title>Hello</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+    <script>
+
+        var x = 1;
+        var y = 1;
+        var easing = 0.05;
+
+        function setup() {
+            createCanvas(720, 400);
+            noStroke();
+        }
+
+        function draw()
+        {
+            background(0,0,0);
+            var targetX = mouseX;
+            var dx = targetX - x;
+            x += dx * easing;
+
+            var targetY = mouseY;
+            var dy = targetY - y;
+            y += dy * easing;
+
+            ellipse(x,y,66,66);
+
+        }
+    </script>
+
 </head>
 <body>
 
