@@ -26,7 +26,6 @@
 
         function predict(x) {
             const xs = tf.tensor1d(x);
-            // y = mx + b;
             const ys = xs.mul(m).add(b);
             return ys;
         }
