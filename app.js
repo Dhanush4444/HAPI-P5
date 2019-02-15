@@ -36,6 +36,14 @@ server.route({
 
 server.route({
     method: 'GET',
+    path: '/linear',
+    handler: (request, h) => {
+
+        return h.file('./public/linear.html');
+    }
+});
+server.route({
+    method: 'GET',
     path: '/input',
     handler: (request, h) => {
 
