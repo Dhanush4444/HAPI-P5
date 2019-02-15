@@ -3,8 +3,8 @@
 const Hapi = require('hapi');
 
 const server = Hapi.server({
-    port: 3000,
-    host: 'localhost'
+    port: process.env.PORT,
+    host: 'ece201.herokuapp.com'
 });
 
 server.route({
