@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Birds</title>
+    <script src="https://unpkg.com/ml5@0.1.3/dist/ml5.min.js"></script>
+</head>
+<body>
+<p>
+    <span id="result">...</span> with a confidence of
+    <span id="probability">...</span></p>
+
+<img src="./assets/bird1.jpg"
+     crossorigin="anonymous" id="image1" width="400" onclick="birdClicked('image1')">
+
+
+<img src="./assets/bird2.jpg"
+     crossorigin="anonymous" id="image2" width="400" onclick="birdClicked('image2')">
+
+<img src="./assets/bird3.jpg"
+     crossorigin="anonymous" id="image3" width="400" onclick="birdClicked('image3')">
+
+<h3>Click on image</h3>
+<script>
+
+    function birdClicked(name){
+        const image = document.getElementById(name);
+        const result = document.getElementById('result');
+        const probability = document.getElementById('probability');
+
+        ml5.imageClassifier('MobileNet').then(classifier => classifier.predict(image)).then(results => {
+            result.innerText = results[0].className;
+            probability.innerText = results[0].probability.toFixed(4);
+        });
+
+    }
+
+
+
+</script>
+</body>
+</html>
