@@ -3,7 +3,8 @@
 const Hapi = require('hapi');
 
 const server = Hapi.server({
-    port: process.env.PORT
+    // port: process.env.PORT
+    port: 3000
 });
 
 server.route({
@@ -33,13 +34,7 @@ server.route({
     }
 });
 
-server.route({
-   method: 'GET',
-   path: '/birds',
-    handler: (req,res)=>{
-       return res.file('./public/birds.html');
-    }
-});
+
 
 server.route({
     method: 'GET',
