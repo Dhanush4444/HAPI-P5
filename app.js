@@ -3,8 +3,8 @@
 const Hapi = require('hapi');
 
 const server = Hapi.server({
-    // port: process.env.PORT
-    port: 3000
+    port: process.env.PORT
+    // port: 3000
 });
 
 server.route({
