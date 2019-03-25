@@ -35,7 +35,13 @@ server.route({
 });
 
 
-
+server.route({
+    method: 'GET',
+    path: '/polygon',
+    handler: (req,h) =>{
+        return h.file('./public/polygons.html');
+    }
+});
 
 server.route({
     method: 'GET',
