@@ -36,6 +36,7 @@ server.route({
 
 
 
+
 server.route({
     method: 'GET',
     path: '/linear',
